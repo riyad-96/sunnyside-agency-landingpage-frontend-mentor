@@ -1,0 +1,61 @@
+@import 'tailwindcss';
+
+@font-face {
+  font-family: 'Barlow';
+  src: url('./assets/fonts/Barlow/barlow-v12-latin-800.woff2');
+  font-weight: 800;
+}
+@font-face {
+  font-family: 'Barlow';
+  src: url('./assets/fonts/Barlow/barlow-v12-latin-600.woff2');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Fraunces';
+  src: url('./assets/fonts/Fraunces/fraunces-v37-latin-900.woff2');
+  font-weight: 900;
+}
+@font-face {
+  font-family: 'Fraunces';
+  src: url('./assets/fonts/Fraunces/fraunces-v37-latin-700.woff2');
+  font-weight: 700;
+}
+
+@theme {
+  --breakpoint-md: 50rem;
+}
+
+:root {
+  --red-400: hsl(7, 99%, 70%);
+  --yellow-500: hsl(51, 100%, 49%);
+  --green-800: hsl(167, 40%, 24%);
+  --green-500: hsl(167, 34%, 41%);
+  --green-300: hsl(167, 44%, 65%);
+  --blue-800: hsl(198, 62%, 26%);
+
+  --grey-950: hsl(212, 27%, 19%);
+  --grey-600: hsl(213, 9%, 39%);
+  --grey-550: hsl(232, 10%, 55%);
+  --grey-400: hsl(210, 4%, 67%);
+  --white: hsl(0, 100%, 100%);
+}
+
+#nav-menu:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  translate: 0 -100%;
+  border-left: 15px solid transparent;
+  border-bottom: 15px solid white;
+  border-right: 15px solid white;
+  border-top: 15px solid transparent;
+}
+
+@media(width<50rem) {
+  #nav-menu.show {
+    display: grid;
+  }
+}
