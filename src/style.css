@@ -54,8 +54,53 @@
   border-top: 15px solid transparent;
 }
 
-@media(width<50rem) {
+@media (width<50rem) {
   #nav-menu.show {
     display: grid;
+  }
+}
+
+@keyframes smooth-bounce {
+  0% {
+    translate: 0 -10px;
+  }
+  50% {
+    translate: 0 10px;
+  }
+  100% {
+    translate: 0 -10px;
+  }
+}
+
+.devNote {
+  opacity: 0;
+  display: none;
+  transition-property: display opacity;
+  transition-duration: 350ms;
+  transition-behavior: allow-discrete;
+
+  .devNote-content {
+    scale: 0.2;
+    translate: 0 250%;
+    transition: 400ms;
+  }
+}
+
+.devNote.show {
+  display: grid;
+  opacity: 1;
+
+  @starting-style {
+    opacity: 0;
+  }
+
+  .devNote-content {
+    scale: 1;
+    translate: 0 0;
+
+    @starting-style {
+      scale: 0.2;
+      translate: 0 250%;
+    }
   }
 }
